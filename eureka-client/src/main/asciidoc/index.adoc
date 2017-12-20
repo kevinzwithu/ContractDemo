@@ -1,0 +1,32 @@
+= Spring REST Docs
+Kevinz demo <kevinz.zhao@sap.com>
+
+== getUserList
+This is an example output for a getUserList service.
+
+.request
+include::{snippets}/getUserList/http-request.adoc[]
+
+.response
+include::{snippets}/getUserList/http-response.adoc[]
+
+== getUser
+This is an example output for a getUser service. It will return a json format string, includes:
+
+* name
+* a mysterious message
+
+.request
+include::{snippets}/getUser/http-request.adoc[]
+
+.response
+include::{snippets}/getUser/http-response.adoc[]
+
+== createUser
+This is an example output for a createUser service.
+
+.request
+include::{snippets}/createUser/http-request.adoc[]
+
+.response
+include::{snippets}/createUser/http-response.adoc[]
