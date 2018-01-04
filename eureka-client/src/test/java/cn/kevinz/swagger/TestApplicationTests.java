@@ -1,5 +1,7 @@
 package cn.kevinz.swagger;
 
+import io.restassured.module.mockmvc.RestAssuredMockMvc;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,18 +10,23 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import javax.ws.rs.core.MediaType;
-
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+
+
 @RunWith(SpringRunner.class)
 @WebMvcTest(TestApplication.class)
 @AutoConfigureRestDocs(outputDir = "target/snippets", uriPort = 8762)
 public class TestApplicationTests {
+
+    @Before
+    public void setup() {
+        RestAssuredMockMvc.standaloneSetup(new TestApplication());
+    }
 
     @Autowired
     private MockMvc mockMvc;

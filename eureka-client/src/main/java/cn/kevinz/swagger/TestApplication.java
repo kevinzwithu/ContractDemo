@@ -1,8 +1,5 @@
 package cn.kevinz.swagger;
 
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiImplicitParams;
-import io.swagger.annotations.ApiOperation;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Value;
@@ -25,12 +22,9 @@ public class TestApplication {
 	@Value("${server.port}")
 	String port;
 
-	@ApiOperation(value="Get User List", notes="Get all users and put them into a list")
 	@RequestMapping(value="/user", method=RequestMethod.GET)
 	public String getAllUser() { return "This is user list."; }
 
-	@ApiOperation(value="Get User Information", notes="Get detailed information of specific user.")
-	@ApiImplicitParam(name = "name", value = "This is name of user", required = true, dataType = "String")
 	@RequestMapping(value="/user/{name}", method=RequestMethod.GET)
 	public String getUser(@PathVariable("name") String name) throws JSONException {
 		JSONObject obj = new JSONObject();
@@ -39,11 +33,6 @@ public class TestApplication {
 		return obj.toString();
 	}
 
-	@ApiOperation(value="Create New User", notes="Create a new user who does not exist.")
-	@ApiImplicitParams({
-		@ApiImplicitParam(name = "id", value = "This is ID of user to specify user.", required = true, dataType = "Long"),
-		@ApiImplicitParam(name = "name", value = "This is name of user.", required = true, dataType = "String")
-	})
 	@RequestMapping(value="/user/{name}", method=RequestMethod.POST)
 	public String postUser(@PathVariable("name") String name) {
 		return "I've pushed user " + name + " into list.";

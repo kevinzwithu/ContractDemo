@@ -15,6 +15,7 @@ This is an example output for a getUser service. It will return a json format st
 
 * name
 * a mysterious message
+* 1212
 
 .request
 include::{snippets}/getUser/http-request.adoc[]
