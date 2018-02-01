@@ -29,7 +29,7 @@ public class OrderBeerApplicationService {
         OrderBeerApplicationStatus orderBeerApplicationStatus = null;
         if (response.getCheckedStatus() == CheckedStatus.OK) {
             orderBeerApplicationStatus = OrderBeerApplicationStatus.ORDER_ALLOWED;
-        } else if (response.getCheckedStatus() == CheckedStatus.Not_OK) {
+        } else if (response.getCheckedStatus() == CheckedStatus.NOT_OK) {
             orderBeerApplicationStatus = OrderBeerApplicationStatus.ORDER_REJECTED;
         }
 

@@ -8,27 +8,26 @@ Contract.make {
         url '/beer'
         body("""
     {
-      "Id":"123456",
-      "Age":15,
-      "Name":"Greenberg",
-      "Amount":1,
-      "Desire":3
+      "id":"123456",
+      "age":15,
+      "name":"Greenberg",
+      "amount":1,
+      "desire":3
     }
     """)
         headers {
-            header('Content-Type', 'application/json')
+            contentType('application/json')
         }
     }
     response {
         status 200
-        body("""
-  {
-    "orderStatus": false,
-    "rejectionReason": "Too young to get beer"
-  }
-  """)
+        body([
+                checkedStatus : "NOT_OK",
+                "orderStatus" : false,
+                "rejectReason": "Too young to get beer"
+        ])
         headers {
-            header('Content-Type': 'application/json')
+            contentType('application/json')
         }
     }
 }

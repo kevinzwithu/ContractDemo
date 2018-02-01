@@ -8,26 +8,25 @@ Contract.make {
         url '/beer'
         body("""
     {
-      "Id":"123457",
-      "Age":21,
-      "Name":"Kevinz",
-      "Amount":1,
-      "Desire":2
+      "id":"123457",
+      "age":21,
+      "name":"Kevinz",
+      "amount":1,
+      "desire":2
     }
     """)
         headers {
-            header('Content-Type', 'application/json')
+            contentType('application/json')
         }
     }
     response {
         status 200
-        body("""
-  {
-    "orderStatus": true
-  }
-  """)
+        body([
+                checkedStatus: "OK",
+                "orderStatus": true
+        ])
         headers {
-            header('Content-Type': 'application/json')
+            contentType('application/json')
         }
     }
 }

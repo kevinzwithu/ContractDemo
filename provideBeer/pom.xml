@@ -55,6 +55,18 @@
             <artifactId>spring-cloud-starter-contract-verifier</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.jayway.restassured</groupId>
+            <artifactId>spring-mock-mvc</artifactId>
+            <version>2.9.1-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.spockframework</groupId>
+            <artifactId>spock-core</artifactId>
+            <version>1.1-groovy-2.4</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -68,11 +80,9 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-contract-maven-plugin</artifactId>
                 <version>1.2.1.RELEASE</version>
-                <!-- Don't forget about this value !! -->
                 <extensions>true</extensions>
                 <configuration>
-                    <!-- Provide the base class for your auto-generated tests -->
-                    <baseClassForTests>com.example.MvcTest</baseClassForTests>
+                    <baseClassForTests>cn.kevinz.provider.ProviderBase</baseClassForTests>
                 </configuration>
             </plugin>
         </plugins>
