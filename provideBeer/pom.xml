@@ -67,6 +67,12 @@
             <version>1.1-groovy-2.4</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.github.ricardofpu</groupId>
+            <artifactId>global-exception-handler</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -82,6 +88,7 @@
                 <version>1.2.1.RELEASE</version>
                 <extensions>true</extensions>
                 <configuration>
+                    <contractsDirectory></contractsDirectory>
                     <baseClassForTests>cn.kevinz.provider.ProviderBase</baseClassForTests>
                 </configuration>
             </plugin>
