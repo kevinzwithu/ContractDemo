@@ -10,9 +10,9 @@ public class ProviderBase {
     }
 
     private StatsProvider stubbedStatsProvider() {
-        return fraudType -> {
-            switch (fraudType) {
-                case DRUNKS:
+        return indentType -> {
+            switch (indentType) {
+                case LEGAL:
                     return 100;
                 case ALL:
                     return 200;
