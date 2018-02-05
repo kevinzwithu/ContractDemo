@@ -12,7 +12,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @RestController
 public class BeerIndentController {
     private static final String NO_REASON = null;
-    private static final String TOO_YOUNG = "To young to get beer";
+    private static final String TOO_YOUNG = "Too young to get beer";
     private static final int THRESHOLD_AMOUNT = 18;
 
     @RequestMapping(value = "/beer", method = POST)
