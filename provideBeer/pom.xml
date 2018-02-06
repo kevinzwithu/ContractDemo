@@ -88,8 +88,15 @@
                 <version>1.2.1.RELEASE</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <contractsDirectory></contractsDirectory>
-                    <baseClassForTests>cn.kevinz.provider.ProviderBase</baseClassForTests>
+                    <!--<stubsMode>REMOTE</stubsMode>-->
+                    <contractsWorkOffline>false</contractsWorkOffline>
+                    <contractsRepositoryUrl>https://github.com/kevinzwithu/ContractDemo-Contracts/beer-service</contractsRepositoryUrl>
+                    <contractDependency>
+                        <groupId>cn.kevinz</groupId>
+                        <artifactId>beer-service</artifactId>
+                        <version>0.0.1-SNAPSHOT</version>
+                    </contractDependency>
+                    <!--<baseClassForTests>cn.kevinz.provider.ProviderBase</baseClassForTests>-->
                 </configuration>
             </plugin>
         </plugins>
