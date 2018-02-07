@@ -1,8 +1,6 @@
-package cn.kevinz.provider;
+package cn.kevinz.beerservice;
 
-import cn.kevinz.provider.model.IndentCheck;
-import cn.kevinz.provider.model.IndentCheckResult;
-import cn.kevinz.provider.model.CheckedStatus;
+import cn.kevinz.beerservice.model.*;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

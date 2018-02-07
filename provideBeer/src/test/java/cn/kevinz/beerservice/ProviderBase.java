@@ -1,4 +1,4 @@
-package cn.kevinz.provider;
+package cn.kevinz.beerservice;
 import org.junit.Before;
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 

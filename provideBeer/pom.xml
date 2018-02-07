@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.kevinz</groupId>
-    <artifactId>provider</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>beerservice</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>provider</name>
@@ -88,15 +88,15 @@
                 <version>1.2.1.RELEASE</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <!--<stubsMode>REMOTE</stubsMode>-->
-                    <contractsWorkOffline>false</contractsWorkOffline>
-                    <contractsRepositoryUrl>https://github.com/kevinzwithu/ContractDemo-Contracts/beer-service</contractsRepositoryUrl>
+                    <stubs>REMOTE</stubs>
+                    <contractsWorkOffline>true</contractsWorkOffline>
+                    <!--<contractsRepositoryUrl>https://github.com/kevinzwithu/ContractDemo-Contracts/beer-service</contractsRepositoryUrl>-->
                     <contractDependency>
                         <groupId>cn.kevinz</groupId>
-                        <artifactId>beer-service</artifactId>
-                        <version>0.0.1-SNAPSHOT</version>
+                        <artifactId>beerservice</artifactId>
+                        <version>1.0-SNAPSHOT</version>
                     </contractDependency>
-                    <!--<baseClassForTests>cn.kevinz.provider.ProviderBase</baseClassForTests>-->
+                    <baseClassForTests>cn.kevinz.beerservice.ProviderBase</baseClassForTests>
                 </configuration>
             </plugin>
         </plugins>

@@ -1,4 +1,4 @@
-package cn.kevinz.provider.model;
+package cn.kevinz.beerservice.model;
 
 public class IndentCheck {
     private String name, id;
